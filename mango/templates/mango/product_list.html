@@ -1,15 +1,23 @@
+{% extends 'mango/base.html' %} {% block content %}
 <h2>Products <a href="">New Product</a></h2>
-<ul>
+<div class="container-card">
   {% for product in products %}
-  <li>
-    <a href="">
-      {{ product.name }}
-    </a>
-    <p>
-      {{ product.description }}
-      {{ product.product_image }}
-      ${{ product.price }}
-    </p>
-  </li>
+  <div class="card m-3">
+    <img class="card-img-top" src="{{ product.product_image }}" alt="dog toy" />
+    <div class="card-body">
+      <ul>
+        <li>
+          <a href="">
+            {{ product.name }}
+          </a>
+          <p>
+            {{ product.description }}
+            ${{ product.price }}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
   {% endfor %}
-</ul>
+</div>
+{% endblock %}
