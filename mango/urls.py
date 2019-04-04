@@ -3,13 +3,13 @@ from . import views
 
 urlpatterns = [
     path('', views.product_list, name='product_list'),
-    path('comments/', views.comment_list, name='comment_list'),
-    path('products/<int:pk>', views.product_detail, name='product_detail'),
-    path('comments/<int:pk>', views.comment_detail, name='comment_detail'),
-    path('products/new', views.product_create, name='product_create'),
-    path('comments/new', views.comment_create, name='comment_create'),
-    path('products/<int:pk>/edit', views.post_edit, name='post_edit'),
-    path('comments/<int:pk>/edit', views.comment_edit, name='comment_edit'),
-    path('posts/<int:pk>/delete', views.post_delete, name='post_delete'),
-    path('comments/<int:pk>/delete', views.comment_delete, name='comment_delete'),
+    # path('carts/', views.cart_list, name='cart_list'),
+    # path('products/<int:pk>', views.product_detail, name='product_detail'),
+    # path('carts/<int:pk>', views.cart_detail, name='cart_detail'),
+    # path('products/new', views.product_create, name='product_create'),
+    # path('carts/new', views.cart_create, name='cart_create'),
+    # path('products/<int:pk>/edit', views.product_edit, name='product_edit'),
+    # path('carts/<int:pk>/edit', views.cart_edit, name='cart_edit'),
+    # path('products/<int:pk>/delete', views.product_delete, name='product_delete'),
+    # path('carts/<int:pk>/delete', views.cart_delete, name='cart_delete'),
 ]
