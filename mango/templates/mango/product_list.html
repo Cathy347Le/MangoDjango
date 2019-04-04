@@ -1,21 +1,29 @@
 {% extends 'mango/base.html' %} {% block content %}
 <h2>Products <a href="">New Product</a></h2>
-<div class="container-card">
+<div class="container-card m-5">
   {% for product in products %}
-  <div class="card m-3">
-    <img class="card-img-top" src="{{ product.product_image }}" alt="dog toy" />
+  <div class="card m-3" style="width: 18rem; background: #F5F5F5;">
+    <img
+      class="card-img-top"
+      style="height:190px"
+      ;
+      src="{{ product.product_image }}"
+      alt="dog toy"
+    />
     <div class="card-body">
-      <ul>
-        <li>
-          <a href="">
-            {{ product.name }}
-          </a>
-          <p>
-            {{ product.description }}
-            ${{ product.price }}
-          </p>
-        </li>
-      </ul>
+      <p>
+        <a class="text-dark" href="">
+          {{ product.name }}
+        </a>
+        <span style="float: right;"> ${{ product.price }} </span>
+      </p>
+      <button
+        type="button"
+        style="margin-left: 25%; background: darkorange; color: white;"
+        class="btn btn-outline-dark"
+      >
+        Add to Cart
+      </button>
     </div>
   </div>
   {% endfor %}
