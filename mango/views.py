@@ -18,3 +18,10 @@ def product_detail(request, pk):
 def cart_detail(request, pk):
     cart = Cart.objects.get(id=pk)
     return render(request, 'mango/cart_detail.html', {'cart': cart})
+
+
+def add_to_cart(request, pk)
+    product = Product.objects.get(id=pk)
+        product.cart_id = 2
+        product.save()
+    return render(request, 'mango/product_list.html', {'products': products})
