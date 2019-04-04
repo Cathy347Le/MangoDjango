@@ -1,0 +1,2 @@
+# MangoDjango
+Django Hackathon Project
