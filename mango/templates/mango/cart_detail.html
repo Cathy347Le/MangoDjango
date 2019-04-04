@@ -1,0 +1,15 @@
+{% extends 'mango/base.html' %} {% block content %}
+<h2>{{ cart.name }}</h2>
+{% for product in cart.products.all %}
+<div class="card m-3">
+  <div class="card-body">
+    <p>
+      {{ product.name }}
+    </p>
+    <p>
+      {{ product.description }}
+    </p>
+    <p>${{ product.price }}</p>
+  </div>
+</div>
+{% endfor %} {% endblock %}

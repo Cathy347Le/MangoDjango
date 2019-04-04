@@ -1,0 +1,10 @@
+{% extends 'mango/base.html' %} {% block content %}
+<h2>Carts</h2>
+<ul>
+  {% for cart in carts %}
+  <li>
+    <a href="{% url 'cart_detail' pk=cart.pk %}">{{ cart.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

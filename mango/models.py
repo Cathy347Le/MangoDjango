@@ -11,10 +11,7 @@ class Product(models.Model):
     description = models.CharField(max_length=750)
     product_image = models.CharField(max_length=500)
     price = models.IntegerField()
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='products')
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, blank=True, null=True, related_name='products')
 
     def __str__(self):
             return self.name
-
-
-
