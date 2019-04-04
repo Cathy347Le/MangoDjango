@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'mango_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mango',
+        'NAME': 'mango_db',
         'USER': 'mangouser',
         'PASSWORD': 'mango',
         'HOST': 'localhost'
