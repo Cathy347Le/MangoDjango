@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0424d967e8f6a069775df0565af719e131225ccf7bd99c57cb4a3c5a2692b228"
+            "sha256": "9bfab6124d79d1b91cebafb505002fc5e77abbbb83141bfe38959cf0038dc998"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,13 @@
             ],
             "index": "pypi",
             "version": "==2.2"
+        },
+        "django-drift-chatwidget": {
+            "hashes": [
+                "sha256:a00ed7e9e45919aaf3a92c487e908a1b31f12f6228455ba0bc2c09309dec085a"
+            ],
+            "index": "pypi",
+            "version": "==0.1.1"
         },
         "psycopg2-binary": {
             "hashes": [

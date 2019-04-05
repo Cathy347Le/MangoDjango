@@ -9,6 +9,7 @@ autopep8 = "*"
 [packages]
 django = "*"
 psycopg2-binary = "*"
+django-drift-chatwidget = "*"
 
 [requires]
 python_version = "3.7"
