@@ -21,14 +21,14 @@ def cart_detail(request, pk):
 
 def addto_cart(request, pk):
     product = Product.objects.get(id=pk)
-    product.cart_id = 2
+    product.cart_id = 1
     product.save()
-    cart = Cart.objects.get(id=2)
+    cart = Cart.objects.get(id=1)
     return render(request, 'mango/cart_detail.html', {'cart': cart})
 
 def deletefrom_cart(request, pk):
     product = Product.objects.get(id=pk)
     product.cart_id = ""
     product.save()
-    cart = Cart.objects.get(id=2)
+    cart = Cart.objects.get(id=1)
     return render(request, 'mango/cart_detail.html', {'cart': cart})

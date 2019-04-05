@@ -3,3 +3,8 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.gallery {
+  height: 600px;
+  width: 800px;
+}
