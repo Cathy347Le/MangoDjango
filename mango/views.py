@@ -28,6 +28,20 @@ def addto_cart(request, pk):
     cart = Cart.objects.get(id=1)
     return render(request, 'mango/cart_detail.html', {'cart': cart})
 
+def add_qty(request, pk):
+    product = Product.objects.get(id=pk)
+    product.quantity = F('quantity') +1
+    product.save()
+    cart = Cart.objects.get(id=1)
+    return render(request, 'mango/cart_detail.html', {'cart': cart})
+
+def del_qty(request, pk):
+    product = Product.objects.get(id=pk)
+    product.quantity = F('quantity') -1
+    product.save()
+    cart = Cart.objects.get(id=1)
+    return render(request, 'mango/cart_detail.html', {'cart': cart})
+
 def deletefrom_cart(request, pk):
     product = Product.objects.get(id=pk)
     product.cart_id = ""
