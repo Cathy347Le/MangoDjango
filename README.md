@@ -3,6 +3,7 @@ Django Hackathon Project
 
 Pet E-Commerce site built with Python, Django and Bootstrap.
 
+<img width="1280" alt="Screen Shot 2019-04-05 at 4 23 47 PM" src="https://user-images.githubusercontent.com/46323883/55655195-8436cf80-57c1-11e9-80f0-ddeb518af8ef.png">
 
 
 ### Getting Started
