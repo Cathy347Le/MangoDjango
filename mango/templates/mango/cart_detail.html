@@ -1,6 +1,14 @@
 {% extends 'mango/base.html' %} {% block content %}
-<h2>{{ cart.name }}</h2>
-{% for product in cart.products.all %}
+<h2>Shopping Cart</h2>
+{% if not cart.products.all %}
+<div class="card m-3">
+  <div class="card-body">
+    <h5>
+      The cart is empty.
+    </h5>
+  </div>
+</div>
+{% endif %} {% for product in cart.products.all %}
 <div class="card m-3">
   <div class="card-body">
     <p>
@@ -10,6 +18,14 @@
       {{ product.description }}
     </p>
     <p>${{ product.price }}</p>
+    <a
+      role="button"
+      href="{% url 'deletefrom_cart' pk=product.pk %}"
+      style="margin-left: 25%; background: #FE5F55; color: white; border-radius: 30px"
+      class="btn btn-outline-dark"
+    >
+      Remove from Cart
+    </a>
   </div>
 </div>
 {% endfor %} {% endblock %}

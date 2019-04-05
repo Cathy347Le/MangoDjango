@@ -23,4 +23,12 @@ def addto_cart(request, pk):
     product = Product.objects.get(id=pk)
     product.cart_id = 2
     product.save()
-    return render(request, 'mango/product_detail.html', {'product': product})
+    cart = Cart.objects.get(id=2)
+    return render(request, 'mango/cart_detail.html', {'cart': cart})
+
+def deletefrom_cart(request, pk):
+    product = Product.objects.get(id=pk)
+    product.cart_id = ""
+    product.save()
+    cart = Cart.objects.get(id=2)
+    return render(request, 'mango/cart_detail.html', {'cart': cart})
