@@ -22,8 +22,26 @@
       style="background: #FE5F55; color: white; border-radius: 30px"
       class="btn btn-outline-dark"
     >
-      Remove from Cart
+      <i class="fas fa-cart-arrow-down"></i> Remove from Cart
     </a>
+    <a
+      role="button"
+      href="{% url 'add_qty' pk=product.pk %}"
+      style="background: #FE5F55; color: white; border-radius: 30px"
+      class="btn btn-outline-dark"
+    >
+      <i class="fas fa-plus"></i> Add Quantity
+    </a>
+    {% if not product.quantity == 1 %}
+    <a
+      role="button"
+      href="{% url 'del_qty' pk=product.pk %}"
+      style="background: #FE5F55; color: white; border-radius: 30px"
+      class="btn btn-outline-dark"
+    >
+      <i class="fas fa-minus"></i> Remove Quantity
+    </a>
+    {% endif %}
   </div>
 </div>
 {% endfor %} {% endblock %}
