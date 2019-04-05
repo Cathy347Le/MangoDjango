@@ -1,23 +1,33 @@
 {% extends 'mango/base.html' %} {% block content %}
-<h2>{{ product.name }}</h2>
-<h3>
-  <a href="">(Edit)</a>
-  <a href="">(Delete)</a>
-</h3>
-{% if product.cart_id %}
-<h4>Product has been added to cart: {{ product.cart_id }}</h4>
-{% endif %}
-<div class="card m-3">
-  <img class="card-img-top" src="{{ product.product_image }}" alt="dog toy" />
-  <div class="card-body">
-    <ul>
-      <li>
-        <p>
-          {{ product.description }}
-          ${{ product.price }}
-        </p>
-      </li>
-    </ul>
+<div style="display: flex; justify-content: center">
+  <h2>{{ product.name }}</h2>
+</div>
+<div style="display: flex; justify-content: center">
+  {% if product.cart_id %}
+  <h4>Product is in your cart.</h4>
+  {% endif %}
+</div>
+<div style="display: flex; justify-content: center">
+  <div class="card m-3" style="width: 40rem;">
+    <img class="card-img-top" src="{{ product.product_image }}" alt="dog toy" />
+    <div class="card-body">
+      <ul>
+        <li>
+          <p>
+            {{ product.description }}
+            ${{ product.price }}
+          </p>
+          <a
+            role="button"
+            href="{% url 'addto_cart' pk=product.pk %}"
+            style="background: #FE5F55; color: white; border-radius: 30px"
+            class="btn btn-outline-dark"
+          >
+            <i class="fas fa-cart-plus"></i> Add to Cart
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 {% endblock %}
