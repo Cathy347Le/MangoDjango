@@ -12,20 +12,24 @@
     />
     <div class="card-body">
       <p class="font-weight-bold">
-        <a style="color: #234A5D;" href="">
+        <a
+          style="color: #234A5D;"
+          href="{% url 'product_detail' pk=product.pk %}"
+        >
           {{ product.name }}
         </a>
         <span style="float: right; color: #FE5F55;">
           ${{ product.price }}
         </span>
       </p>
-      <button
-        type="button"
+      <a
+        role="button"
+        href="{% url 'addto_cart' pk=product.pk %}"
         style="margin-left: 25%; background: #FE5F55; color: white; border-radius: 30px"
         class="btn btn-outline-dark"
       >
         Add to Cart
-      </button>
+      </a>
     </div>
   </div>
   {% endfor %}

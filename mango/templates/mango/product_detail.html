@@ -4,6 +4,9 @@
   <a href="">(Edit)</a>
   <a href="">(Delete)</a>
 </h3>
+{% if product.cart_id %}
+<h4>Product has been added to cart: {{ product.cart_id }}</h4>
+{% endif %}
 <div class="card m-3">
   <img class="card-img-top" src="{{ product.product_image }}" alt="dog toy" />
   <div class="card-body">
