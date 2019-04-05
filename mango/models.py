@@ -10,6 +10,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=750)
     product_image = models.CharField(max_length=500)
+    quantity = models.PositiveIntegerField(default=0)
     price = models.IntegerField()
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, blank=True, null=True, related_name='products')
 
